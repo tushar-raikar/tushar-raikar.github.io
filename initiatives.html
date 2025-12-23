@@ -3,65 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>कार्यप्रणाली आणि संकल्प | तुषार रायकर</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+    <title>Tushar Raikar - Ward No. 25</title>
     <style>
-        body { font-family: 'Mukta', sans-serif; }
-        .bg-bjp-orange { background-color: #FF9933; }
-        .text-bjp-orange { color: #FF9933; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background-color: #ff9933; /* Saffron color representing BJP */
+            color: white;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .container {
+            max-width: 900px;
+            width: 95%;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .image-section {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .image-section h2 {
+            border-bottom: 2px solid #138808; /* Green color */
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 20px;
+            font-size: 0.9em;
+            text-align: center;
+            color: #666;
+        }
     </style>
 </head>
-<body class="bg-gray-50">
+<body>
 
-    <header class="bg-white shadow-md py-4 sticky top-0 z-50">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-orange-500">
-                    <img src="candidate.png" alt="Tushar Raikar" class="w-full h-full object-cover">
-                </div>
-                <div>
-                    <h1 class="text-xl font-bold text-gray-800">तुषार रायकर</h1>
-                    <p class="text-xs text-orange-600 font-bold uppercase">प्रभाग क्रमांक २५</p>
-                </div>
-            </div>
-            <a href="index.html" class="text-bjp-orange font-bold hover:underline">← मुख्य पान</a>
-        </div>
-    </header>
+<header>
+    <h1>तुषार प्रतिभा सतीश रायकर</h1>
+    <p>प्रभाग क्रमांक २५ | महात्मा फुले मंडई-शनिवार पेठ</p>
+</header>
 
-    <section class="bg-bjp-orange py-16 text-white text-center">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4" data-aos="zoom-in">व्हिजन २०२४-२९</h2>
-            <p class="text-xl opacity-90" data-aos="fade-up">"नवीन आशा, युवा विश्वास" [cite: 25]</p>
-        </div>
-    </section>
+<div class="container">
+    <div class="image-section">
+        <h2>नवीन आशा, युवा विश्वास</h2>
+        <img src="page1.jpg" alt="CV Page 1 - Vision and Introduction">
+    </div>
 
-    <section class="py-16">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-10">
-            
-            <div class="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-pink-500" data-aos="fade-right">
-                <h3 class="text-2xl font-bold mb-4">महिला सुरक्षा व सुविधा [cite: 40]</h3>
-                <ul class="space-y-2 text-gray-600">
-                    <li>• अधिक संख्येने सी.सी.टी.व्ही. आणि पुरेसा प्रकाश [cite: 40]</li>
-                    <li>• स्वच्छ सार्वजनिक शौचालये व स्तनपान केंद्र [cite: 40]</li>
-                    <li>• सॅनिटरी पॅड्स पुरवठा व सुरक्षा सहाय्य केंद्र [cite: 40]</li>
-                </ul>
-            </div>
+    <div class="image-section">
+        <h2>सामाजिक सेवा आणि जनसेवा उपक्रम</h2>
+        <img src="page2.jpg" alt="CV Page 2 - Social Service Highlights">
+    </div>
+</div>
 
-            <div class="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-blue-500" data-aos="fade-left">
-                <h3 class="text-2xl font-bold mb-4">जेष्ठ नागरिक कल्याण [cite: 41]</h3>
-                <ul class="space-y-2 text-gray-600">
-                    <li>• तातडीची आरोग्य केंद्रे व डॉक्टरसंपर्क [cite: 41]</li>
-                    <li>• योग-वॉकिंग प्लाझा व उद्यानांत बाकांची सोय [cite: 41]</li>
-                    <li>• पेन्शन योजना लाभ निवारण केंद्र [cite: 41]</li>
-                </ul>
-            </div>
+<footer>
+    <p>&copy; 2024 Tushar Raikar. All Rights Reserved.</p>
+</footer>
 
-        </div>
-    </section>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
