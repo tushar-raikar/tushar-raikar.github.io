@@ -1,53 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Display</title>
-    <style>
-        /* Remove all default spacing */
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            background-color: #333; /* Dark background to make the CV pop */
-            scroll-snap-type: y mandatory; /* Smooth snapping between pages */
-            overflow-x: hidden;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Screen Images</title>
 
-        /* Each page section */
-        .page-container {
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            scroll-snap-align: start;
-        }
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
 
-        /* The Image */
-        img {
-            max-height: 100%;
-            max-width: 100%;
-            object-fit: contain; /* Ensures the whole page fits without cropping */
-            display: block;
-        }
+    .screen {
+      height: 100vh;       /* full screen height */
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: black;
+    }
 
-        /* Hide scrollbar for a cleaner look (optional) */
-        ::-webkit-scrollbar {
-            display: none;
-        }
-    </style>
+    .screen img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain; /* keeps full image visible */
+    }
+  </style>
 </head>
 <body>
 
-    <div class="page-container">
-        <img src="page1.jpg" alt="CV Page 1">
-    </div>
+  <div class="screen">
+    <img src="page1.jpg" alt="Image 1">
+  </div>
 
-    <div class="page-container">
-        <img src="page2.jpg" alt="CV Page 2">
-    </div>
+  <div class="screen">
+    <img src="page1.jpg" alt="Image 2">
+  </div>
 
 </body>
 </html>
