@@ -1,51 +1,53 @@
 <!DOCTYPE html>
-<html lang="mr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tushar Raikar - Ward No. 25</title>
+    <title>CV Display</title>
     <style>
+        /* Remove all default spacing */
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
+            background-color: #333; /* Dark background to make the CV pop */
+            scroll-snap-type: y mandatory; /* Smooth snapping between pages */
             overflow-x: hidden;
-            scroll-snap-type: y mandatory; /* Enables vertical snapping */
-            font-family: Arial, sans-serif;
         }
 
-        /* Each section takes exactly one full screen height */
-        section {
+        /* Each page section */
+        .page-container {
             height: 100vh;
             width: 100vw;
-            scroll-snap-align: start; /* Snaps the top of the section to the top of the screen */
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #f4f4f4;
+            scroll-snap-align: start;
         }
 
+        /* The Image */
         img {
-            max-height: 95vh; /* Keep image within screen height */
-            max-width: 95vw;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            border-radius: 8px;
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain; /* Ensures the whole page fits without cropping */
+            display: block;
         }
 
-        /* Optional Saffron/Green theme for a political profile */
-        .page1 { border-top: 10px solid #ff9933; } 
-        .page2 { border-top: 10px solid #138808; }
+        /* Hide scrollbar for a cleaner look (optional) */
+        ::-webkit-scrollbar {
+            display: none;
+        }
     </style>
 </head>
 <body>
 
-    <section class="page1">
-        <img src="page1.jpg" alt="Tushar Raikar - New Hope, Youth Trust">
-    </section>
+    <div class="page-container">
+        <img src="page1.jpg" alt="CV Page 1">
+    </div>
 
-    <section class="page2">
-        <img src="page2.jpg" alt="Social Service and Public Welfare Initiatives">
-    </section>
+    <div class="page-container">
+        <img src="page2.jpg" alt="CV Page 2">
+    </div>
 
 </body>
 </html>
