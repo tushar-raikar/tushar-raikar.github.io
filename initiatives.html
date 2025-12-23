@@ -6,7 +6,48 @@
 
 <title>Two Images Full Screen</title>
 
-<style>
+<style><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Screen Images</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    .screen {
+      height: 100vh;       /* full screen height */
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: black;
+    }
+
+    .screen img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain; /* keeps full image visible */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="screen">
+    <img src="page1.jpg" alt="Image 1">
+  </div>
+
+  <div class="screen">
+    <img src="page2.jpg" alt="Image 2">
+  </div>
+
+</body>
+</html>
   body {
     margin: 0;
     scroll-snap-type: y mandatory;
