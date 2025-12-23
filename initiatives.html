@@ -5,81 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tushar Raikar - Ward No. 25</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+        body, html {
             margin: 0;
             padding: 0;
-            background-color: #f0f2f5;
-            color: #333;
+            height: 100%;
+            overflow-x: hidden;
+            scroll-snap-type: y mandatory; /* Enables vertical snapping */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Each section takes exactly one full screen height */
+        section {
+            height: 100vh;
+            width: 100vw;
+            scroll-snap-align: start; /* Snaps the top of the section to the top of the screen */
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            background-color: #f4f4f4;
         }
-        header {
-            background-color: #ff9933; /* Saffron color representing BJP */
-            color: white;
-            width: 100%;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .container {
-            max-width: 900px;
-            width: 95%;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .image-section {
-            margin-bottom: 40px;
-            text-align: center;
-        }
-        .image-section h2 {
-            border-bottom: 2px solid #138808; /* Green color */
-            display: inline-block;
-            padding-bottom: 5px;
-            margin-bottom: 20px;
-        }
+
         img {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            max-height: 95vh; /* Keep image within screen height */
+            max-width: 95vw;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-radius: 8px;
         }
-        footer {
-            margin-top: 20px;
-            padding: 20px;
-            font-size: 0.9em;
-            text-align: center;
-            color: #666;
-        }
+
+        /* Optional Saffron/Green theme for a political profile */
+        .page1 { border-top: 10px solid #ff9933; } 
+        .page2 { border-top: 10px solid #138808; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>तुषार प्रतिभा सतीश रायकर</h1>
-    <p>प्रभाग क्रमांक २५ | महात्मा फुले मंडई-शनिवार पेठ</p>
-</header>
+    <section class="page1">
+        <img src="page1.jpg" alt="Tushar Raikar - New Hope, Youth Trust">
+    </section>
 
-<div class="container">
-    <div class="image-section">
-        <h2>नवीन आशा, युवा विश्वास</h2>
-        <img src="page1.jpg" alt="CV Page 1 - Vision and Introduction">
-    </div>
-
-    <div class="image-section">
-        <h2>सामाजिक सेवा आणि जनसेवा उपक्रम</h2>
-        <img src="page2.jpg" alt="CV Page 2 - Social Service Highlights">
-    </div>
-</div>
-
-<footer>
-    <p>&copy; 2024 Tushar Raikar. All Rights Reserved.</p>
-</footer>
+    <section class="page2">
+        <img src="page2.jpg" alt="Social Service and Public Welfare Initiatives">
+    </section>
 
 </body>
 </html>
