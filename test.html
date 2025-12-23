@@ -1,50 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tushar Raikar</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tushar Raikar</title>
 
-  <style>
-    body {
-      margin: 0;
-      background: white;
-    }
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    .page {
-      width: 100vw;
-      height: calc(var(--vh, 1vh) * 100);
-    }
+  body {
+    background: white;
+  }
 
-    .page img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain; /* prevents zoom */
-      display: block;
-      background: white;
-    }
-  </style>
+  .page {
+    width: 100vw;
+  }
+
+  .page img {
+    width: 100%;
+    height: auto;       /* ✅ NO fixed height */
+    display: block;     /* ✅ removes inline gap */
+  }
+</style>
 </head>
 
 <body>
 
   <div class="page">
-    <img src="page1.jpg" alt="Image 1">
+    <img src="page1.jpg" alt="Page 1">
   </div>
 
   <div class="page">
-    <img src="page2.jpg" alt="Image 2">
+    <img src="page2.jpg" alt="Page 2">
   </div>
-
-  <script>
-    function setVH() {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', vh + 'px');
-    }
-
-    setVH();
-    window.addEventListener('resize', setVH);
-  </script>
 
 </body>
 </html>
